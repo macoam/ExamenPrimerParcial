@@ -24,7 +24,7 @@ namespace ExamenPrimerParcial
 
             set
             {
-                if (value < 1800 && value <= 2019)
+                if (value >= 1800 && value <= 2019)
                 {
                     _año = value;
                 }
@@ -68,7 +68,7 @@ namespace ExamenPrimerParcial
 
             set
             {
-                if (value < 0 && value <= 10)
+                if (value >= 0 && value <= 10)
                 {
                     _rantingimdb = value;
                 }
@@ -82,27 +82,24 @@ namespace ExamenPrimerParcial
 
         public Peliculas()
         {
-            Titulo = "Call Me By Your Name";
+            Titulo = "Sin titulo";
             Director = "Sin establecer";
-            Genero = "Romance, LGBT, Drama";
-            Sinopsis = "Elio y Oliver pasan un verano juntos en Italia";
-            Playlists1 = new List<Playlists>();
-            Año = 2017;
-            DuracionDeMinutos = 127;
-            RantingImdb = 9.72;
+            Genero = "No género";
+            Sinopsis = "No hay";
         }
 
-        public Peliculas(string titulo, string director, string genero, string sinopsis, List<Playlists> playlists, int año, int duraciondeminutos, double rantingimdb)
+        public Peliculas(string titulo, string director, string genero, string sinopsis, int año, int duraciondeminutos, double rantingimdb)
         {
             Titulo = titulo;
             Director = director;
             Genero = genero;
             Sinopsis = sinopsis;
-            Playlists1 = new List<Playlists>();
-            Año = año;
-            DuracionDeMinutos = duraciondeminutos;
-            RantingImdb = rantingimdb;
         }
 
+        public Peliculas(string titulo, int año)
+        {
+            Titulo = titulo;
+            Año = año;
+        }
     }
 }

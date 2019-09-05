@@ -8,29 +8,26 @@ namespace ExamenPrimerParcial
 {
     class Playlists
     {
-        private string v;
 
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public object Jugadores { get; internal set; }
-        public object Playlists1 { get; internal set; }
+        public List<Peliculas> Peliculas1 { get; set; }
 
         public Playlists()
         {
-            Titulo = "Ted";
-            Descripcion = "Un oso que cobra vida para hacer féliz a su dueño.";
+            Titulo = "No tiene";
+            Descripcion = "No hay";
+            Peliculas1 = new List<Peliculas>();
         }
 
-        public Playlists(string titulo, string descripcion)
+
+        public Playlists(string titulo)
         {
             Titulo = titulo;
-            Descripcion = descripcion;
+            Descripcion = "Sin Descripción";
+            Peliculas1 = new List<Peliculas>();
         }
 
-        public Playlists(string v)
-        {
-            this.v = v;
-        }
     }
 
 }
